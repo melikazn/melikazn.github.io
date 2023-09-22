@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="On this website you can get familiar with me, Melika Zolfagharian, you can read about my resume and my project and finally contact me."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0819ff01bf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Melika Zolfagharian</title>
+  </head>
+  <body id="body">
+    <div class="wrapper-color-switch">
+      <label for="input-color-switch" id="switch">DarkMode</label>
+      <input type="checkbox" id="input-color-switch" style="display: none" />
+    </div>
+    <div class="menu">
+      <a class="menu" href="index.html">About me</a>
+      <a class="menu" href="resume.html">Resume</a>
+      <a class="menu" href="projects.html">Projects</a>
+      <a class="menu" href="contact.html">Contact</a>
+    </div>
+
+    <div class="resume">
+      <div id="education">Education</div>
+      <div id="experience">Experience</div>
+      <div id="skills">Skills</div>
+      <div id="boxEducation">
+        <div
+          style="
+            width: 0;
+            left: 0;
+            top: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+          "
+          class="collapsible"
+          onclick="toggleDetails()"
+        >
+          Education
+        </div>
+        <div class="content" id="details">
+          <h2>Web Development</h2>
+          <p>Web Development - Mid Sweden University - 2022-</p>
+
+          <h2>Bachelor's Degree of Pysics</h2>
+          <p>Pysics - Alzahra University Tehran - 2014-2018</p>
+        </div>
+      </div>
+      <div id="boxSkills">
+        <dl id="myskills">
+          <dt id="icon1">
+            Programming
+            <i
+              onmouseover="mouseIn(1)"
+              onmouseout="mouseOut(1)"
+              class="fa fa-laptop"
+            ></i>
+          </dt>
+
+          <dd>JavaScript</dd>
+          <dd>HTML&CSS</dd>
+          <dd>Python</dd>
+          <dd>C++</dd>
+          <dt id="icon2">
+            Languages
+            <i
+              onmouseover="mouseIn(2)"
+              onmouseout="mouseOut(2)"
+              class="fa fa-language"
+            ></i>
+          </dt>
+          <dd>Persian</dd>
+          <dd>Swedish</dd>
+          <dd>English</dd>
+          <dt id="icon3">
+            Personal Skills
+            <i
+              onmouseover="mouseIn(3)"
+              onmouseout="mouseOut(3)"
+              class="fa fa-street-view"
+            ></i>
+          </dt>
+          <dd>Leadership</dd>
+          <dd>Problem Solving</dd>
+          <dd>Adaptable</dd>
+        </dl>
+      </div>
+      <div id="boxExperience">
+        <ul class="timeline">
+          <li class="timeline-item">
+            <h3>
+              <div style="font-weight: 600; right: 20px">2016</div>
+              Swedish Tutor - Institutes
+            </h3>
+            <p>
+              I started my career as Swedish tutor in different institutes in
+              Karaj since 2016. I worked at Nasir, Zomar and Kabiri.
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h3>
+              <div style="font-weight: 600">2019</div>
+              Swedish Tutor - Private
+            </h3>
+            <p>
+              I started my page on Instagram on 2019 and I started to work
+              private and online. since 2019 I have worked online I have had
+              many students all around the world and my page has more than 11000
+              followers now.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    var icon1 = document.getElementById("icon1");
+    var icon2 = document.getElementById("icon2");
+    var icon3 = document.getElementById("icon3");
+    function mouseIn(no) {
+      if (no == 1) {
+        icon1.style.color = "#f5f5f5";
+      } else if (no == 2) {
+        icon2.style.color = "#f5f5f5";
+      } else {
+        icon3.style.color = "#f5f5f5";
+      }
+    }
+    function mouseOut(no) {
+      if (no == 1) {
+        icon1.style.color = "black";
+      } else if (no == 2) {
+        icon2.style.color = "black";
+      } else {
+        icon3.style.color = "black";
+      }
+    }
+
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    timelineItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("expanded");
+      });
+    });
+
+    function toggleDetails() {
+      var content = document.getElementById("details");
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("a[href^='#']");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    });
+    var colorSwitch = document.getElementById("input-color-switch");
+    var body = document.getElementById("body");
+    var switchtxt = document.getElementById("switch");
+
+    colorSwitch.addEventListener("click", checkMode);
+
+    function checkMode() {
+      if (colorSwitch.checked) {
+        darkModeOn();
+      } else {
+        darkModeOff();
+      }
+    }
+
+    function darkModeOn() {
+      body.style.background = "black";
+      switchtxt.style.color = "green";
+    }
+    function darkModeOff() {
+      body.style.background = "gray";
+      switchtxt.style.color = "red";
+    }
+  </script>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="On this website you can get familiar with me, Melika Zolfagharian, you can read about my resume and my project and finally contact me."
+  />
+  <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Melika Zolfagharian</title>
+
+  </head>
+  <body id="body">
+    <div class="wrapper-color-switch">
+        <label for="input-color-switch" id="switch">DarkMode</label>
+        <input type="checkbox" id="input-color-switch" style="display: none" />
+      </div>
+    <div class="menu">
+      <a class="menu" href="index.html" >About me</a>
+      <a class="menu" href="resume.html">Resume</a>
+      <a class="menu" href="projects.html">Projects</a>
+      <a class="menu" href="contact.html">Contact</a>
+    </div>
+ 
+    <div style="position: relative; margin: auto; display: block; left: 100px"  class="allprojects">
+      <div class="projects">Projects</div>
+      <div class="amanj">Amanj</div>
+      
+      <div class="miduniversity">MidUniversity</div>
+      <div class="miduniversitybox"><ul>
+        <li id="myproject">Färdtjänst</li>
+        <button id="myprojectbtn1" style="margin-top: 0; margin-bottom: 10px; color: black; height: 30px; text-decoration: underline;">More information</button>
+        <div id="mymodal1" class="modal" >
+            <div id="mycontent" class="modal-content">
+                <span id="closebtn1" class="close">&times;</span>
+                <p>I designed a webbsite for people with disabilities, in Sweden each municipality should provide transportation for these people. On my website people from Huddinge, a municipality in east Sweden, can reserve transportation. I designed the website by HTML, CSS and JavaScript.</p>
+            </div>
+        </div> 
+        <li id="myproject">Webbutveckling </li>
+        <button id="myprojectbtn2" style="margin-top: 0; margin-bottom: 10px; color: black; height: 30px; text-decoration: underline;">More information</button>
+        <div id="mymodal2" class="modal" >
+            <div id="mycontent" class="modal-content">
+                <span id="closebtn2" class="close">&times;</span>
+                <p>I'm studying a program about web development at Mid Sweden University, one of our projects was about presentation about our program,so on this website I explained about the program. I designd it by HTML and CSS.  </p>
+            </div>
+        </div> 
+
+        <li id="myproject" >Bildbehandling</li>
+        <button id="myprojectbtn3" style="margin-top: 0; margin-bottom: 10px; color: black; height: 30px; text-decoration: underline;">More information</button>
+        <div id="mymodal3" class="modal" >
+            <div id="mycontent" class="modal-content">
+                <span id="closebtn3" class="close">&times;</span>
+                <p>In our course we should learn to work with the PhotoShop, so we designed a website and on the website we had different pictures that was edited by Photoshop. I worked on this website by HTML,CSS and Photoshop.</p>
+            </div>
+        </div> 
+        <li id="myproject" >Verona</li>
+        <button id="myprojectbtn4" style="color: black; margin-top: 0; margin-bottom: 10px; height: 30px; text-decoration: underline;">More information</button>
+        <div id="mymodal4" class="modal" >
+            <div id="mycontent" class="modal-content">
+                <span id="closebtn4" class="close">&times;</span>
+                <p>In one of our courses we should design a Website about a business so I designed the website about Verona, our wedding mansion located in Karaj. On this website you can see videos and pictures of Verona and read about our services and more things. I designed the website by HTML, CSS, JavaScript and Figma.  </p>
+            </div>
+        </div> 
+        <li id="myproject">To-do list</li>
+        <button id="myprojectbtn5" style="margin-top: 0; margin-bottom: 10px;color: black; height: 30px; text-decoration: underline;">More information</button>
+        <div id="mymodal5" class="modal" >
+            <div id="mycontent" class="modal-content">
+                <span id="closebtn5" class="close">&times;</span>
+                <p>We had a JavaScript course and on this course our first project was about designing a To-do list where you could add or remove tasks, I designed it by HTML, CSS and JavaScript.</p>
+            </div>
+        </div> 
+      </ul>
+      </div>
+      <div class="amanjbox">
+        <ul>
+            <li id="myproject">Resume</li>
+            <button id="myprojectbtn6" style="margin-top: 0; margin-bottom: 10px;color: black; height: 30px; text-decoration: underline;">More information</button>
+            <div id="mymodal6" class="modal" >
+                <div id="mycontent" class="modal-content">
+                    <span id="closebtn6" class="close">&times;</span>
+                    <p>I'm studying a course about JavaScript. On thise course we should design a website with the topic resume and we should add different features to it, we add the features by JavaScript.</p>
+                </div>
+            </div>
+            <li id="myproject" >Quiz game</li>
+            <button id="myprojectbtn7" style="margin-top: 0; margin-bottom: 10px;color: black; height: 30px; text-decoration: underline;">More information</button>
+            <div id="mymodal7" class="modal" >
+                <div id="mycontent" class="modal-content">
+                    <span id="closebtn7" class="close">&times;</span>
+                    <p>I designed a game with four questions, each question has four answer options the user could select and at the end he/she could see the point.</p>
+                </div>
+            </div>
+        </ul>
+      </div>
+
+  </body>
+  <script>
+    // Get references to the modal and trigger elements
+    var modal1 = document.getElementById("mymodal1");
+    var modal2 = document.getElementById("mymodal2");
+    var modal3 = document.getElementById("mymodal3");
+    var modal4 = document.getElementById("mymodal4");
+    var modal5 = document.getElementById("mymodal5");
+    var modal6 = document.getElementById("mymodal6");
+    var modal7 = document.getElementById("mymodal7");
+    var mybtn1 = document.getElementById("myprojectbtn1");
+    var mybtn2 = document.getElementById("myprojectbtn2");
+    var mybtn3 = document.getElementById("myprojectbtn3");
+    var mybtn4 = document.getElementById("myprojectbtn4");
+    var mybtn5 = document.getElementById("myprojectbtn5");
+    var mybtn6 = document.getElementById("myprojectbtn6");
+    var mybtn7 = document.getElementById("myprojectbtn7");
+    var closebtn1 = document.getElementById("closebtn1");
+    var closebtn2 = document.getElementById("closebtn2");
+    var closebtn3 = document.getElementById("closebtn3");
+    var closebtn4 = document.getElementById("closebtn4");
+    var closebtn5 = document.getElementById("closebtn5");
+    var closebtn6 = document.getElementById("closebtn6");
+    var closebtn7 = document.getElementById("closebtn7");
+    
+    mybtn1.addEventListener("click", ()=> {
+        modal1.style.display= "block";
+    });
+    closebtn1.addEventListener("click", ()=> {
+        modal1.style.display= "none";
+    });
+
+    mybtn2.addEventListener("click", ()=> {
+        modal2.style.display= "block";
+    });
+    closebtn2.addEventListener("click", ()=> {
+        modal2.style.display= "none";
+    });
+
+    mybtn3.addEventListener("click", ()=> {
+        modal3.style.display= "block";
+    });
+    closebtn3.addEventListener("click", ()=> {
+        modal3.style.display= "none";
+    });
+
+    mybtn4.addEventListener("click", ()=> {
+        modal4.style.display= "block";
+    });
+    closebtn4.addEventListener("click", ()=> {
+        modal4.style.display= "none";
+    });    
+    
+    mybtn5.addEventListener("click", ()=> {
+        modal5.style.display= "block";
+    });
+    closebtn5.addEventListener("click", ()=> {
+        modal5.style.display= "none";
+    });    
+    
+    mybtn6.addEventListener("click", ()=> {
+        modal6.style.display= "block";
+    });
+    closebtn6.addEventListener("click", ()=> {
+        modal6.style.display= "none";
+    });    mybtn7.addEventListener("click", ()=> {
+       
+    modal7.style.display= "block";
+    });
+    closebtn7.addEventListener("click", ()=> {
+        modal7.style.display= "none";
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a[href^='#']");
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+
+      var colorSwitch = document.getElementById("input-color-switch");
+    var body = document.getElementById("body");
+    colorSwitch.addEventListener("click", checkMode);
+
+    function checkMode() {
+      if (colorSwitch.checked) {
+        darkModeOn();
+      } else {
+        darkModeOff();
+      }
+    }
+
+    function darkModeOn() {
+      body.style.background = "black";
+    }
+    function darkModeOff() {
+        body.style.background = "gray";
+    }
+    var colorSwitch = document.getElementById("input-color-switch");
+    var body = document.getElementById("body");
+    var switchtxt = document.getElementById("switch");
+
+    colorSwitch.addEventListener("click", checkMode);
+
+    function checkMode() {
+      if (colorSwitch.checked) {
+        darkModeOn();
+      } else {
+        darkModeOff();
+      }
+    }
+
+    function darkModeOn() {
+      body.style.background = "black";
+      switchtxt.style.color = "green";
+    }
+    function darkModeOff() {
+      body.style.background = "gray";
+      switchtxt.style.color = "red";
+    }
+
+  </script>
+</html>

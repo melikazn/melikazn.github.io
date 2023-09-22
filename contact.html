@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="On this website you can get familiar with me, Melika Zolfagharian, you can read about my resume and my project and finally contact me."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Melika Zolfagharian</title>
+  </head>
+  <body id="body">
+    <div class="wrapper-color-switch">
+      <label for="input-color-switch" id="switch">DarkMode</label>
+      <input type="checkbox" id="input-color-switch" style="display: none" />
+    </div>
+    <div class="menu">
+      <a class="menu" href="index.html">About me</a>
+      <a class="menu" href="resume.html">Resume</a>
+      <a class="menu" href="projects.html">Projects</a>
+      <a class="menu" href="contact.html">Contact</a>
+    </div>
+    <div class="form-container">
+      <h1 style="color: #c36d36; margin-top: 150px">Contact Form</h1>
+      <form
+        name="contactForm"
+        method="post"
+        onsubmit="return validate()"
+        action="#"
+      >
+        <label for="name">* Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          onkeyup="validateName()"
+        />
+        <span class="errors" id="error-name">Name is required!</span>
+
+        <label for="email">* Email</label>
+        <input
+          type="text"
+          placeholder="Email address"
+          id="email"
+          name="email"
+          onkeyup="validateEmail()"
+        />
+        <span class="errors" id="error-email">Email is required!</span>
+
+        <label for="phone">* Phone</label>
+        <input
+          type="text"
+          placeholder="Phone number"
+          id="phone"
+          name="phone"
+          onkeyup="validatePhone()"
+        />
+        <span class="errors" id="error-phone">Phone is required!</span>
+
+        <label for="subject">* Message</label>
+        <textarea
+          placeholder="Your message"
+          cols="132"
+          rows="5"
+          name="subject"
+          id="subject"
+          onkeyup="validateMessage()"
+        ></textarea>
+        <span class="errors" id="error-message">Please write your message</span>
+
+        <button onclick="return validateForm()">Submit</button>
+        <span class="errors" id="error-submit">Please fix the errors!</span>
+      </form>
+    </div>
+  </body>
+  <script>
+    var nameError = document.getElementById("error-name");
+    var emailError = document.getElementById("error-email");
+    var phoneError = document.getElementById("error-phone");
+    var messageError = document.getElementById("error-message");
+    var submitError = document.getElementById("error-submit");
+
+    function validateName() {
+      var name = document.getElementById("name").value;
+      if (name.length === 0) {
+        nameError.innerHTML = "Name is required!";
+        return false;
+      }
+      if (!name.match(/^[A-Za-z]*\s{1}[A-za-z]*$/)) {
+        nameError.innerHTML = "Write full name!";
+        return false;
+      }
+      nameError.innerHTML = "Valid!";
+      return true;
+    }
+
+    function validatePhone() {
+      var phone = document.getElementById("phone").value;
+      if (phone.length === 0) {
+        phoneError.innerHTML = "Phone No is required!";
+        return false;
+      }
+      if (phone.length !== 7) {
+        phoneError.innerHTML = "Phone No should be 7 digit";
+        return false;
+      }
+      if (!phone.match(/^[0-9]{7}$/)) {
+        phoneError.innerHTML = "Phone No is invalid!";
+        return false;
+      }
+      phoneError.innerHTML = "Valid!";
+      return true;
+    }
+
+    function validateEmail() {
+      var email = document.getElementById("email").value;
+      if (email.length === 0) {
+        emailError.innerHTML = "Valid Email is required!";
+        return false;
+      }
+      if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        emailError.innerHTML = "Email is invalid!";
+        return false;
+      }
+      emailError.innerHTML = "Valid!";
+      return true;
+    }
+
+    function validateMessage() {
+      var message = document.getElementById("subject").value;
+      if (message.length === 0) {
+        messageError.innerHTML = "Please write your message!";
+        return false;
+      }
+      if (message.length < 20) {
+        messageError.innerHTML = "Please write at least 20 characters!";
+        return false;
+      }
+      messageError.innerHTML = "Valid!";
+      return true;
+    }
+
+    function validateForm() {
+      if (
+        !validateName() ||
+        !validateEmail() ||
+        !validatePhone() ||
+        !validateMessage()
+      ) {
+        submitError.style.display = "block";
+        submitError.innerHTML = "Please fix error to submit!";
+        setTimeout(function () {
+          submitError.style.display = "none";
+          3000;
+        });
+        return false;
+      }
+      submitError.innerHTML = "We'll respond within 5 days!";
+      return true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("a[href^='#']");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    });
+    var colorSwitch = document.getElementById("input-color-switch");
+    var body = document.getElementById("body");
+    var switchtxt = document.getElementById("switch");
+
+    colorSwitch.addEventListener("click", checkMode);
+
+    function checkMode() {
+      if (colorSwitch.checked) {
+        darkModeOn();
+      } else {
+        darkModeOff();
+      }
+    }
+
+    function darkModeOn() {
+      body.style.background = "black";
+      switchtxt.style.color = "green";
+    }
+    function darkModeOff() {
+      body.style.background = "gray";
+      switchtxt.style.color = "red";
+    }
+  </script>
+</html>
