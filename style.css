@@ -1,0 +1,502 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+    background-color: gray;
+    color: #F5F5F5;
+}
+#switch{
+  font-size: 12px;
+  margin-top:10px;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 800;
+  text-shadow: 1px 1px #f5f5f5;
+  color: #c36d36;
+}
+#input-color-switch{
+  margin-top: 10px;
+  top:0;
+  ;
+}
+.wrapper-color-switch{
+  margin-top: 0;
+  top:0;
+}
+h3{
+  font-size: 32px; 
+  font-weight: 400;
+}
+.menu{
+
+color: #F5F5F5;
+font-size: 24px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 800;
+word-wrap: break-word;
+overflow: hidden;
+margin: auto;
+position: relative;
+right: 10px;
+padding: 7px;
+left: 25vw;
+
+}
+
+a{
+    text-decoration: none;
+}
+.myphoto{
+    width:25%; 
+    border-radius: 87px;
+    margin-top: 180px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    bottom: 8px;
+    position: fixed;
+}
+#str{
+    position: absolute;
+    top: 200px;
+    left: 60%;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-weight: 600;
+    word-wrap:normal;
+}
+#aboutme{
+    width: 40%;
+    right: 40px;
+    top: 200px;
+    bottom: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+
+  }
+label {
+    display: block;
+    margin-top: 25px;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  }
+  input , button, value{
+    margin-left: 0;
+  }
+input, textarea {
+    width: 80%;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    border: 1px solid #f5f5f5;
+    border-radius: 20px;
+  }
+button {
+    width: 82.5%;
+    height: 50px;
+    border-radius: 20px;
+    color: #f5f5f5;
+    background: #c36d36;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    cursor: pointer;
+    border: 1px solid#c36d36;
+    margin-top: 25px;
+    transition: color .4s ease-out, background .4s ease-out;
+  }
+button:hover {
+    color: #c36d36;
+    background: #f5f5f5;
+  }
+.errors {
+    display: block;
+    color: #c36d36;
+    margin-top: 5px;
+  }
+.error {
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    box-shadow: 0 0 15px 0 #c36d36(255,36,0,1);
+  }
+.errors i{
+    color: #c36d36;
+  }
+.resume{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+#education{
+    left: 100px;
+    top: 130px;
+    position: absolute;
+    color: #f5f5f5;
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-weight: 600;
+    word-wrap: break-word;
+
+  }
+#boxEducation{
+    width: 240px;
+    height: 506px;
+    left: 40px;
+    top: 200px;
+    position: absolute;
+    background: #c36d36;
+    border-radius: 10px;
+  }
+#experience{
+    left: 450px;
+    top: 130px;
+    position: absolute;
+    color: #f5f5f5;
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+#boxExperience{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    width: 240px;
+    height: 506px;
+    left: 400px;
+    margin-right: 10px;
+    top: 200px;
+    position: absolute;
+    background: #c36d36;
+    border-radius: 10px;
+  }
+#skills{
+    left: 820px;
+    top: 130px;
+    position: absolute;
+    color: #f5f5f5;
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+#boxSkills{
+    width: 240px;
+    height: 506px;
+    left: 780px;
+    top: 200px;
+    position: absolute;
+    background: #c36d36;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  }
+#myeducation{
+    margin: 40px;
+  }
+dl dt{
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+i:hover{
+  font-size: 55px;
+  transition: all 0.4s;
+
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-item {
+  border-left: 2px solid black;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.timeline-item h3 {
+  margin-top: 0;
+}
+
+.timeline-item p {
+  display: none;
+}
+
+.timeline-item.expanded p {
+  display: block;
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.collapsible {
+  font-size: 32px;
+  align-items: center;
+  color: black;
+  margin-left: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  text-decoration: underline;
+}
+
+.content {
+  display: none;
+  padding: 10px;
+  
+}
+.projects{
+  left: 350px;
+  top: 100px;
+  position: absolute;
+  color: #f5f5f5;
+  font-size: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+.miduniversity{
+  left: 150px;
+  top: 160px;
+  position: absolute;
+  color: #f5f5f5;
+  font-size: 36px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+
+}
+.miduniversitybox{
+  width: 300px;
+  height: 506px;
+  left: 90px;
+  top: 230px;
+  position: absolute;
+  background: #c36d36;
+  border-radius: 10px;
+}
+.amanj{
+  left: 550px;
+  top: 160px;
+  position: absolute;
+  color: #f5f5f5;
+  font-size: 36px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.amanjbox{
+  width: 300px;
+  height: 506px;
+  left: 450px;
+  top: 230px;
+  position: absolute;
+  background: #c36d36;
+  border-radius: 10px;
+}
+#myproject{
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+.modal-content {
+        background-color:#c36d36;
+        padding: 20px;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+
+.close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+      }
+@media screen and (max-device-width: 572px) { 
+        .logo{
+          margin: 10px;
+          width: 5%;
+        }
+        .menu{
+          font-size: 12px;
+          margin: auto;
+          padding: 5px;
+          right: 0px;
+          left: 30%;
+          top: 1px;
+        }
+
+       .miduniversitybox {
+        width:38%;  
+        left: 0;
+        margin-left: 0;
+        padding-left: 0;
+        top:130px;
+       }
+       #myproject{
+        font-size: 90%;
+        margin-right: 10px;
+       }
+       button{
+        font-size: 90%;
+        
+       }
+       .amanjbox{
+        width:38%;
+        left:50%;
+        top: 130px;
+        margin-right: 10px;
+       }
+       .amanj{
+        font-size: 100%;
+        left: 55%;
+        top:100px
+       }
+       .miduniversity{
+        left:5%;
+        font-size: 100%;
+
+        top:100px;
+
+       }
+       .projects{
+        font-size: 130%;
+        top: 60px;
+        left: 40%;
+       }
+       h1{
+        font-size: 24px;
+       }
+       input{
+        width: 300px;
+       }
+       textarea{
+        width: 300px;
+       }
+       #education{
+        left: 45px;
+        top: 60px;
+        font-size: 20px;
+      }
+    #boxEducation{
+        width: 25%;
+        left: 40px;
+        top: 100px;
+      }
+    #experience{
+        left: 200px;
+        top: 60px;
+        font-size: 20px;
+      }
+    #boxExperience{
+        width: 25%;
+        left: 200px;
+        margin-right: 10px;
+        top: 100px;
+      }
+    #skills{
+        left: 350px;
+        top: 60px;
+        font-size: 22px;
+
+      }
+    #boxSkills{
+        width: 25%;
+        left: 350px;
+        top: 100px;
+    }
+    .collapsible {
+      font-size: 18px;
+      align-items: center;
+      margin-left: 7px;
+      text-decoration: underline;
+    }
+    h2{
+      font-size: 12px;
+      font-weight: 800;
+    }
+    p {
+      font-size: 11px;
+    }
+    .timeline-item h3 {
+      margin-top: 0;
+
+      font-size: 12px;
+    }
+    
+    .timeline-item.expanded p {
+      left: 0;
+      margin-left: 1px;
+      margin-right: 10px;
+      font-size: 10px;
+
+    }
+    h3{
+      font-size: 12px; 
+      font-weight: 400"
+    }
+    dl dt{
+      margin-left: 5px;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    }
+    dd{
+      font-size: 10px;
+    }
+    #aboutme{
+      font-size: 12px;
+      width: 40%;
+      left:30%;
+      top: 60%;
+      position: fixed;
+    }
+    .myphoto{
+      width:25%; 
+      border-radius: 87px;
+      margin-top: 20px;
+      top:60px;
+      margin-left: 1px;
+      left: 30%;
+      position: fixed;
+      margin-bottom: 150px;
+      bottom: 100px;
+  }
+  }
